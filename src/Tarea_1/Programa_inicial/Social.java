@@ -53,7 +53,7 @@ public class Social {
 
                 case 1:
 
-                    for (String[] fila : datos) {
+                    for (String[] fila : datos) { // Recorre todas las filas que guardamos en datos
 
                         if (fila[0].trim().equalsIgnoreCase("TWITTER") &&
                                 fila[1].trim().equalsIgnoreCase("SEGUIDORES (FOLLOWERS)")) {
@@ -115,7 +115,7 @@ public class Social {
 
                     if (idx1 != -1 && idx2 != -1) {
 
-                        for (String[] fila : datos) {
+                        for (String[] fila : datos) { // Recorre todas las filas que guardamos en datos
 
                             if (fila[0].trim().equalsIgnoreCase("YOUTUBE") &&
                                     fila[1].trim().equalsIgnoreCase("VISUALIZACIONES")) {
@@ -146,7 +146,7 @@ public class Social {
                     int contTw = 0;
                     int contFb = 0;
 
-                    for (String[] fila : datos) {
+                    for (String[] fila : datos) {// Recorre todas las filas que guardamos en datos
 
                         if (fila[0].trim().equalsIgnoreCase("TWITTER") &&
                                 fila[1].trim().equalsIgnoreCase("CRECIMIENTO DE FOLLOWERS")) {
