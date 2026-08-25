@@ -171,9 +171,8 @@ public class Social {
 
                     if (contTw > 0) {
 
-                        System.out.printf(
-                                "Promedio crecimiento Twitter: %.2f%n",
-                                sumaTw / contTw
+                        System.out.println(
+                                "Promedio crecimiento Twitter: " + (sumaTw / contTw)
                         );
 
                     } else {
@@ -185,9 +184,8 @@ public class Social {
 
                     if (contFb > 0) {
 
-                        System.out.printf(
-                                "Promedio crecimiento Facebook: %.2f%n",
-                                sumaFb / contFb
+                        System.out.println(
+                                "Promedio crecimiento Facebook: " + (sumaFb / contFb)
                         );
 
                     } else {
@@ -201,18 +199,26 @@ public class Social {
 
                 case 4:
 
-                    double sumaLikes = 0;
-                    int contLikes = 0;
+                    int contFace = 0;
+                    double sumaLikesF = 0;
+                    int contTwi = 0;
+                    double sumaLikesT = 0;
+                    int conYout = 0;
+                    double sumaLikesY = 0;
 
-                    for (String[] fila : datos) {
+                    for (String[] fila : datos) {// Recorre todas las filas que guardamos en datos
 
                         if (fila[0].trim().equalsIgnoreCase("YOUTUBE") &&
                                 fila[1].trim().equalsIgnoreCase("ME GUSTA")) {
 
                             for (int i = 3; i <= 8; i++) {
 
-                                sumaLikes += Integer.parseInt(fila[i].trim());
-                                contLikes++;
+                                sumaLikesY += Integer.parseInt(fila[i].trim());
+                                conYout++;
+                            }
+                            if (conYout > 0){
+                                System.out.println("El promedio de Me gusta en Youtube es: " + (sumaLikesY / conYout)
+                                );
                             }
                         }
 
@@ -221,8 +227,12 @@ public class Social {
 
                             for (int i = 3; i <= 8; i++) {
 
-                                sumaLikes += Integer.parseInt(fila[i].trim());
-                                contLikes++;
+                                sumaLikesT += Integer.parseInt(fila[i].trim());
+                                contTwi++;
+                            }
+                            if (contTwi > 0){
+                                System.out.println("El promedio de Me gusta en Twitter es: " + (sumaLikesT / contTwi)
+                                );
                             }
                         }
 
@@ -230,26 +240,21 @@ public class Social {
                                 fila[1].trim().equalsIgnoreCase("ME GUSTA EN PUBLICACIONES")) {
 
                             for (int i = 3; i <= 8; i++) {
-
-                                sumaLikes += Integer.parseInt(fila[i].trim());
-                                contLikes++;
+                                sumaLikesF += Integer.parseInt(fila[i].trim());
+                                contFace++;
+                            }
+                            if (contFace > 0){
+                                System.out.println("El promedio de Me gusta en Facebook es: " + (sumaLikesF / contFace)
+                                );
                             }
                         }
                     }
+                    System.out.println(
+                            "El promedio general de me gusta de las tres apps juntas es: "
+                                    + ((sumaLikesT + sumaLikesY + sumaLikesF) /
+                                    (contFace + contTwi + conYout))
+                    );
 
-                    if (contLikes > 0) {
-
-                        System.out.printf(
-                                "Promedio general de Me gusta: %.2f%n",
-                                sumaLikes / contLikes
-                        );
-
-                    } else {
-
-                        System.out.println(
-                                "No se encontraron datos de Me gusta."
-                        );
-                    }
 
                     break;
 
