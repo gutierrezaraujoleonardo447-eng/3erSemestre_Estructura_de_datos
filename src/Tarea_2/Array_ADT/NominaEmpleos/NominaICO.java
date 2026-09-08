@@ -12,13 +12,12 @@ public class NominaICO {
         this.rutaArchivo = rutaArchivo;
     }
 
-    public void leerArchivo() {
+    public void leerArchivo() { // Contar Empleados
 
         int cantidad = 0;
 
         try {
-            BufferedReader br = new BufferedReader(
-                    new FileReader(rutaArchivo));
+            BufferedReader br = new BufferedReader(new FileReader(rutaArchivo));
 
             // Contar los empleados
             br.readLine();
