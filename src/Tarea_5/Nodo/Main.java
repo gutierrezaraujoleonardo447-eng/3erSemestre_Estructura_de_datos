@@ -26,7 +26,7 @@ public class Main {
         actual.setSiguiente(fe);
         System.out.println(head);
 
-        System.out.println("\n--------Insertar Nodo con valor de Z-------------\n");
+        System.out.println("\n--------Insertar Nodo2 con valor de Z-------------\n");
         Nodo tmp = head;
         while(tmp.getSiguiente() != null){
             tmp = tmp.getSiguiente();

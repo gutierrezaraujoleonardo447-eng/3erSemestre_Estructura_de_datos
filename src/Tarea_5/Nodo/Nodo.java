@@ -33,7 +33,7 @@ public class Nodo <T> {  private T dato;
 
     @Override
     public String toString() {
-        return "Nodo{" +
+        return "Nodo2{" +
                 "dato=" + dato +
                 ", siguiente=" + siguiente +
                 '}';
