@@ -26,8 +26,6 @@ public class Main {
         System.out.println("\n-------Tamaño lista---------\n");
         System.out.println(lista.getTamanio());
 
-
-
         System.out.println("\n-------Agregando al inicio---------\n");
         lista.agregarAlInicio(perro4);
         lista.transversal();
@@ -56,10 +54,8 @@ public class Main {
         lista.eliminarElFinal();
         lista.transversal();
 
-
         System.out.println("\n-------Comprobar Tamaño---------\n");
         System.out.println(lista.getTamanio());
-
 
         System.out.println("\n-------Comprobar si esta vacia---------\n");
         System.out.println(lista.estaVacia());
